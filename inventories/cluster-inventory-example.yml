@@ -1,0 +1,24 @@
+plugin: ocmplus.cm.ocm_managedcluster
+cluster_groups:
+- name: dev-amazon
+  label_selectors:
+  - cloud=Amazon
+  - environment=dev
+- name: prod-amazon
+  label_selectors:
+  - cloud=Amazon
+  - environment=prod
+- name: dev-azure
+  label_selectors:
+  - cloud=Azure
+  - environment=dev
+- name: prod-azure
+  label_selectors:
+  - cloud=Azure
+  - environment=prod
+- name: kind-clusters
+  label_selectors:
+  - name=kind-cluster
+- name: all-managed-clusters
+  label_selectors:
+  - name!=local-cluster
